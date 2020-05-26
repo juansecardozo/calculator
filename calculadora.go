@@ -10,7 +10,7 @@ import (
 
 type calc struct{}
 
-func (calc) operate(entrada string, operador string) int {
+func (calc) Operate(entrada string, operador string) int {
 	entradaLimpia := strings.Split(entrada, operador)
 	op1 := parse(entradaLimpia[0])
 	op2 := parse(entradaLimpia[1])
@@ -33,12 +33,12 @@ func (calc) operate(entrada string, operador string) int {
 	}
 }
 
-func parse(entrada string) int {
+func Parse(entrada string) int {
 	op, _ := strconv.Atoi(entrada)
 	return op
 }
 
-func leerEntrada() string {
+func LeerEntrada() string {
 	scanner := bufio.NewScanner(os.Stdin)
 	scanner.Scan()
 	return scanner.Text()
