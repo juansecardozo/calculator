@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-type calc struct{}
+type Calc struct{}
 
 func (calc) Operate(entrada string, operador string) int {
 	entradaLimpia := strings.Split(entrada, operador)
